@@ -1,9 +1,6 @@
-line = int(input())
-f_star = "*"
-star = "*"
-space =" "
+l = int(input())
+s = "*"
+b = " "
 
-while line > 0:
-    print(space*(line-1)+star)
-    star += f_star
-    line -= 1 
+for i in range(1,l+1):
+    print("{0}{1}".format(b*(l-i),s*i))
