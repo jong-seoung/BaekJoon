@@ -1,7 +1,7 @@
-nu = []
+a = []
 
 for i in range(9):
-    nu.append(int(input()))
+    a.append(int(input()))
 
-print(max(nu))
-print(nu.index(max(nu))+1)
+print(max(a))
+print(a.index(max(a))+1)
