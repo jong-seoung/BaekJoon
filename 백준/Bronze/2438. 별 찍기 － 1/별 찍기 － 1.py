@@ -1,8 +1,4 @@
-line = int(input())
-f_star = "*"
-star = "*"
-
-while line > 0:
-    print(star)
-    star += f_star
-    line -= 1 
+l = int(input())
+s = "*"
+for i in range(1,l+1):
+    print(s*i)
