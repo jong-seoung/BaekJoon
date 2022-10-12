@@ -1,12 +1,11 @@
-N = input().upper()
-N_set = list(set(N))
-N_list = []
+a = input().upper()
+b = list(set(a))
+c = []
 
-for i in N_set:
-    n = N.count(i)
-    N_list.append(n)
-if N_list.count(max(N_list)) > 1:
+for i in b:
+    d = a.count(i)
+    c.append(d)
+if c.count(max(c)) > 1:
     print("?")
 else:
-    print(N_set[N_list.index(max(N_list))])
-    
+    print(b[c.index(max(c))])
