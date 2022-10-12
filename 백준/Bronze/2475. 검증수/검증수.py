@@ -1,3 +1,6 @@
-a, b, c, d, e= map(int,input().split())
-nu_sum = (int(a)*int(a)+int(b)*int(b)+int(c)*int(c)+int(d)*int(d)+int(e)*int(e))%10
-print(nu_sum)
+a = list(map(int,input().split()))
+c= []
+for i in a:
+    b = i*i
+    c.append(b)
+print(sum(c)%10)
