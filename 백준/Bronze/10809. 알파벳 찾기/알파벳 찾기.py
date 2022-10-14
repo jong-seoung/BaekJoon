@@ -1,8 +1,5 @@
-s = list(input())
-a = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+word = input()
+alphabet = list(range(97,123))  # 아스키코드 숫자 범위
 
-for i in a:
-    if i in s: 
-        print(s.index(i))
-    else:
-        print("-1")
+for x in alphabet :
+    print(word.find(chr(x)))
