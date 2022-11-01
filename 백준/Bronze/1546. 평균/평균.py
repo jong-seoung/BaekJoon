@@ -1,9 +1,10 @@
 n = int(input())
-grade = list(map(int,input().split()))
-max_grade = max(grade)
-grade_list=[]
+a = list(map(int,input().split()))
+b = []
+m = max(a)
 
-for i in grade:
-    g = int(i) / max_grade * 100 
-    grade_list.append(g)
-print(sum(grade_list)/n)
+for i in a:
+    A = i/m*100
+    b.append(A)
+
+print(sum(b)/len(b))
