@@ -1,6 +1,5 @@
-a, b = input().split()
-
-if a[::-1] > b[::-1]:
-    print(a[::-1])
-else:
-    print(b[::-1])
+a,b = input().split()
+lst = []
+lst.append(a[::-1])
+lst.append(b[::-1])
+print(max(lst))
