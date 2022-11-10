@@ -1,10 +1,11 @@
 import sys
-n = int(input())
-a = []
+n = int(sys.stdin.readline())
+b = []
 
 for i in range(n):
-    a.append(int(sys.stdin.readline()))
+    b.append(int(sys.stdin.readline()))
 
-a.sort()
-for i in a:
-    print(i)
+b.sort(reverse=True)
+
+for i in range(n):
+    print(b.pop())
