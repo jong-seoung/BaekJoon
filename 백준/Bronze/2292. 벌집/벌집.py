@@ -1,16 +1,11 @@
 n = int(input())
 
-start = 1
-count = 1
-stage = 0
-
-for i in range(1,n):
-
-    if n > start+stage:
-        stage += 6 * i
-        count += 1
-
-    if n < stage:
+cnt = 1
+a = 1
+while(1):
+    if a >= n :
         break
-
-print(count)
+    else:
+        a += (6 * cnt)
+        cnt += 1
+print(cnt)
