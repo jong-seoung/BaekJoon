@@ -1,9 +1,9 @@
-def gcd(m, n):
+def a(m,n):
     if n == 0:
         return m
-    return gcd(n,m%n)
-    
-m, n = map(int, input().split())
+    return a(n,m%n)
 
-print(gcd(m, n))
-print(m*n//gcd(m, n))
+m,n = map(int,input().split())
+
+print(a(m,n))
+print(m*n//a(m,n))
