@@ -1,22 +1,17 @@
-T = int(input()) # 테스트 횟수
+def a(k,n):
+    for i in range(k+1):
+        globals()[f'f{i}'] = []
+    for i in range(1,n+2):
+        f0.append(i)
+    for i in range(k):
+        globals()[f'f{i+1}'].append(globals()[f'f{i}'][0])
+        for j in range(1,n+1):
+            globals()[f'f{i+1}'].append(globals()[f'f{i}'][j]+globals()[f'f{i+1}'][j-1])
+    return print(globals()[f'f{k}'][n-1])
 
-for t in range(T):
-    K = int(input()) # 층수
-    N = int(input()) # 호수
-    p1 = [] # 1층 사람수
-    p2 = [] # 전체 사람수
+T = int(input())
 
-    for i in range(1,15): # 1층 사람수 넣기
-        p1.append(i)
-
-    for k in range(K):
-        p = 0
-        for n in range(N):
-            p+=p1[n]
-            p2.append(p)
-        p1.clear()
-        p1 = [] + p2
-        p2.clear()
-        N-1
-        
-    print(p1[N-1])
+for i in range(T):
+    k = int(input())
+    n = int(input())
+    a(k,n)
