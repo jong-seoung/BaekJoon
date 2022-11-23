@@ -1,9 +1,16 @@
-import collections
-a = int(input())
-n = collections.deque([i for i in range(1, a+1)])
+n = int(input())
 
-while len(n) > 1:
-    n.popleft()  
-    n.rotate(-1)
-
-print(n[0])
+cnt = 1
+num2 = 2
+num = 1 
+if n == 1:
+    print(1)
+while(n != num):
+    for i in range(0,cnt):
+        a = num2 * i + 2
+        num += 1
+        if n == num:
+            print(a)
+            break
+    cnt = cnt * 2
+    
