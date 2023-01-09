@@ -1,18 +1,10 @@
-n = int(input())
-a = []
-count = 0
-nu = 0
+num = int(input())
 
-while(1):
-    nu += 1
-    for i in str(nu):
-        if (i == "6"):
-            count += 1
-            if count == 3:
-                a.append(nu)   
-        else:
-            count = 0
-    count = 0
-    if len(a) == n:
-        break
-print(nu)
+cnt = 666
+
+while num != 0:
+    if '666' in str(cnt):
+        num -= 1
+    cnt += 1
+    
+print(cnt-1)
