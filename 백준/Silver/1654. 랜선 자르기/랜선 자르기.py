@@ -1,19 +1,23 @@
-k , n = map(int,input().split())
-a = []
-for i in range(k):
-    a.append(int(input()))
+n, k = map(int,input().split())
 
+lst = []
+
+for i in range(n):
+    a = int(input())
+    lst.append(a)
+
+end = max(lst)
 start = 1
-long = max(a)
 
-while start <= long:
-    mid = (start + long) //2
-    line = 0
-    for i in a:
-        line += i //mid
-    
-    if line >= n:
-        start = mid + 1
+while(start <= end):
+    mid = (start + end)//2
+    cnt = 0
+    for i in lst:
+        cnt += i // mid
+    if cnt >= k:
+        start = mid + 1 
     else:
-        long = mid -1
-print(long)
+        end = mid - 1
+
+print(end)
+    
