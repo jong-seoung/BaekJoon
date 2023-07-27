@@ -1,9 +1,10 @@
-b = []
+num = []
+result = []
+for i in range(10):
+    num.append(int(input()))
 
-for i in range(1,11):
-    i = int(input())
+for i in num:
     a = i % 42
-    b.append(a)
+    result.append(a)
 
-c = list(set(b))
-print(len(c))
+print(len(set(result)))
