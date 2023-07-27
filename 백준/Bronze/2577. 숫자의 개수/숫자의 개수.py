@@ -1,8 +1,10 @@
-a = int(input())
-b = int(input())
-c = int(input())
+num = 1
 
-m = list(str(a * b * c))
+for i in range(3):
+    a = int(input())
+    num = a * num
+
+num_list = list(str(num))
 
 for i in range(10):
-    print(m.count(str(i)))
+    print(num_list.count(str(i)))
