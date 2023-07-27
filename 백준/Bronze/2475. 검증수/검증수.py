@@ -1,6 +1,6 @@
-a = list(map(int,input().split()))
-c= []
+a = map(int, input().split())
+cnt = 0
+
 for i in a:
-    b = i*i
-    c.append(b)
-print(sum(c)%10)
+    cnt += i**2
+print(cnt % 10)
