@@ -1,8 +1,9 @@
-n = int(input())
+test_cnt = int(input())
 
-for i in range(n):
-    a,b = input().split()
-    c = ''
-    for j in list(b):
-        c += j * int(a)
-    print(c)
+for i in range(test_cnt):
+    result = ''
+    cnt, word = input().split()
+    word_list = list(word)
+    for j in word_list:
+        result += j * int(cnt)
+    print(result)
