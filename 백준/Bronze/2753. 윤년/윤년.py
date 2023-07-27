@@ -1,11 +1,10 @@
-Y=int(input())
-if Y%4 == 0 :
-    if Y%100 == 0:
-        if Y%400 ==0:
-            print(1)
-        else:
-            print(0)
-    else:
-        print(1)
-else:
-    print(0)
+cnt = int(input())
+result = 0
+if cnt % 4 == 0:
+    result = 1
+    if cnt % 400 == 0:
+        result = 1
+    elif cnt % 100 == 0:
+        result = 0
+
+print(result)
