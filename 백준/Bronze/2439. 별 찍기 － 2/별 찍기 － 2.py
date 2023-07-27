@@ -1,6 +1,4 @@
-l = int(input())
-s = "*"
-b = " "
+a = int(input())
 
-for i in range(1,l+1):
-    print("{0}{1}".format(b*(l-i),s*i))
+for i in range(a):
+    print(" "*(a-i-1)+"*"*(i+1))
