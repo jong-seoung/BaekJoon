@@ -1,13 +1,13 @@
-a = int(input())
+test_cnt = int(input())
 
-for i in range(a):
-    b = str(input().split("X"))
-    score = 0
-    sum_score = 0
-    for j in b:
+for i in range(test_cnt):
+    result = 0
+    cnt = 0
+    test_num = list(input())
+    for j in test_num:
         if j == "O":
-            score += 1
-            sum_score += score
+            cnt += 1
+            result += cnt
         else:
-            score = 0
-    print(sum_score)
+            cnt = 0
+    print(result)
