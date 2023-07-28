@@ -1,12 +1,12 @@
-a = int(input())
+test_score = int(input())
 
-if a >= 90:
+if test_score >= 90:
     print("A")
-elif 90 > a >= 80:
+elif test_score >= 80:
     print("B")
-elif 80 > a >= 70:
+elif test_score >= 70:
     print("C")
-elif 70 > a >= 60:
+elif test_score >= 60:
     print("D")
 else:
     print("F")
