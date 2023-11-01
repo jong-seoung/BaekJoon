@@ -1,13 +1,17 @@
 N = int(input())
 M = int(input())
-S = list(input())
-Pn = 'I'
+S = input()
+count, cursor, result = 0, 0, 0
 
-for i in range(N):
-    Pn += 'OI'
+while cursor < (M-1):
+    if S[cursor:cursor+3] == 'IOI':
+        count += 1
+        cursor += 2
+        if count == N:
+            result += 1
+            count -= 1
+    else:
+        cursor += 1
+        count = 0
 
-for i in range(M-2*N):
-    for j in range(i+1, i+1+2*N):
-        S[i] += S[j]
-
-print(S.count(Pn))
+print(result)
