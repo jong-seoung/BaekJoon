@@ -1,21 +1,17 @@
-n = int(input())    # 작업 수
+T = int(input())
 
-for i in range(n):
+for i in range(T):
+    n = int(input())
+    arr = [0 for i in range(n+3)]
+    i = 0
+    arr[1] = 1
+    arr[2] = 2
+    arr[3] = 4
 
-    num = int(input())
-    d = [0] * (num + 2)
-    re = 4
-    if num == 1:
-        d[1] = 1
-    elif num == 2:
-        d[2] = 2
-    elif num == 3:
-        d[3] = 4
+    if n < 4:
+        pass
     else:
-        d[1] = 1
-        d[2] = 2
-        d[3] = 4
-        while(re < num+1):
-            d[re] = d[re-1] + d[re-2] + d[re-3]
-            re += 1
-    print(d[num])
+        for i in range(4, n+1):
+            arr[i] = arr[i-1] + arr[i-2] + arr[i-3]
+            i += 1
+    print(arr[n])
