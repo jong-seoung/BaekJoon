@@ -2,9 +2,7 @@ import os
 from urllib import parse
 
 HEADER="""# 
-# 백준 & 프로그래머스 문제 풀이 목록
-
-[블로그 링크](https://jongseoung.tistory.com/category/Python/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20-%20%EB%B0%B1%EC%A4%80)
+# 알고리즘 문제 풀이
 
 """
 
