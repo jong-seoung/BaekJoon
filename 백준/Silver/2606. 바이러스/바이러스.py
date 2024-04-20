@@ -1,17 +1,19 @@
-n = int(input())    # 컴퓨터 수
-v = int(input())    # 연결선 수
-graph = [[] for i in range(n+1)]    # 그래프 생성
-visited = [0] * (n+1)   # 방문 여부
+T = int(input())
+n = int(input())
+graph = [[] for i in range(T+1)]
+visited = [0 for i in range(T+1)]
 
-for i in range(v):
-    a, b = map(int, input().split())
-    graph[a] += [b]
-    graph[b] += [a] # 양방향 연결
+for i in range(n):
+    x, y = map(int, input().split())
+    graph[x].append(y)
+    graph[y].append(x)
 
-def dfs(v):
-    visited[v]=1
-    for nx in graph[v]:
-        if visited[nx] == 0:
-            dfs(nx)
+def dfs(x):
+    visited[x] = 1
+    for i in graph[x]:
+        if visited[i] == 0:
+            dfs(i)
+
 dfs(1)
-print(sum(visited)-1)
+
+print(visited.count(1)-1)
