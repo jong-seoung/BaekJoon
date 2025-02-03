@@ -1,6 +1,9 @@
 def solution(arr):
-    answer = []
+    answer = [arr[0]]
+    
     for i in arr:
-        if not answer or answer[-1] != i:
+        if answer[-1] != i:
             answer.append(i)
+
+    print('Hello Python')
     return answer
