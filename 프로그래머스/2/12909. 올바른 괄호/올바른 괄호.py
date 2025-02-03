@@ -1,18 +1,17 @@
 def solution(s):
     answer = True
-    queue = []
-    
+    stack = []
     for i in s:
-        if len(queue) == 0 and i == ')':
-            answer = False
-            break
-        elif i == ')':
-            if queue.pop() != '(':
-                answer=False
-                break
+        if i == '(':
+            stack.append(i)
         else:
-            queue.append(i)
-
-    if len(queue) != 0:
-        answer = False
-    return answer
+            if len(stack) == 0:
+                return False
+            if stack.pop() == '(':
+                pass
+            else:
+                return False
+    if len(stack) == 0:
+        return True
+    else:
+        return False
