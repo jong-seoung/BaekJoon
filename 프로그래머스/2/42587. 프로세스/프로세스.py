@@ -13,5 +13,4 @@ def solution(priorities, location):
         else:
             res.append(queue)
             if location == -1:
-                print('0end')
                 return len(res)
