@@ -1,16 +1,18 @@
 def solution(priorities, location):
     answer = 0
-    res = []
+    ans = []
     while len(priorities) > 0:
-        M = max(priorities)
+        max_pri = max(priorities)
         queue = priorities.pop(0)
         location -= 1
-        print(M, res, queue, priorities, location)
-        if M != queue:
-            priorities.append(queue)
+        print(ans, max_pri, queue, location)
+        if max_pri == queue:
+            ans.append(queue)
             if location == -1:
-                location = len(priorities) - 1
+                return len(ans) 
         else:
-            res.append(queue)
-            if location == -1:
-                return len(res)
+            priorities.append(queue)
+        
+        if location == -1:
+            location = len(priorities) - 1
+    return len(ans)
