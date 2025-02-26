@@ -2,10 +2,10 @@ import heapq
 
 def solution(k, score):
     answer = []
-    king = []
-    heapq.heapify(king)
+    heap = []
     
     for i in score:
-        heapq.heappush(king, i)
-        answer.append(heapq.nlargest(k, king)[-1])
+        heapq.heappush(heap, i)
+        king = heapq.nlargest(k, heap)
+        answer.append(king[-1])
     return answer
